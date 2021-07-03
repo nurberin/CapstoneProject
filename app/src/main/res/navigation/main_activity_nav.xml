@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/girisYapFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.berin.restup.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/toolbarSepeteGecis"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/anasayfaUrunDetayGecis"
+            app:destination="@id/urunDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girisYapFragment"
+        android:name="com.berin.restup.fragment.GirisYapFragment"
+        android:label="fragment_giris_yap"
+        tools:layout="@layout/fragment_giris_yap" >
+        <action
+            android:id="@+id/kayitEkranınaGecis"
+            app:destination="@id/kayitOlFragment" />
+        <action
+            android:id="@+id/anasayfaEkranınaGecis"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kampanyalarFragment"
+        android:name="com.berin.restup.fragment.KampanyalarFragment"
+        android:label="fragment_kampanyalar"
+        tools:layout="@layout/fragment_kampanyalar" >
+        <action
+            android:id="@+id/kampanyaUrunDEtayGecis"
+            app:destination="@id/urunDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitOlFragment"
+        android:name="com.berin.restup.fragment.KayitOlFragment"
+        android:label="fragment_kayit_ol"
+        tools:layout="@layout/fragment_kayit_ol" >
+        <action
+            android:id="@+id/girisEkranınaGecis"
+            app:destination="@id/girisYapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciDetayFragment"
+        android:name="com.berin.restup.fragment.KullaniciDetayFragment"
+        android:label="fragment_kullanici_detay"
+        tools:layout="@layout/fragment_kullanici_detay" />
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.berin.restup.fragment.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <action
+            android:id="@+id/sepetUrunDetayGecis"
+            app:destination="@id/urunDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/urunDetayFragment"
+        android:name="com.berin.restup.fragment.UrunDetayFragment"
+        android:label="UrunDetayFragment"
+        tools:layout="@layout/fragment_urun_detay">
+        <argument
+            android:name="urunNesne"
+            app:argType="com.berin.restup.entity.Urunler" />
+    </fragment>
+</navigation>

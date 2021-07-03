@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/anasayfaFragment"
+        android:icon="@drawable/anasayfa_resim"
+        android:title="Tüm Ürünler" />
+    <item
+        android:id="@+id/kampanyalarFragment"
+        android:icon="@drawable/kampanya_resim"
+        android:title="Kampanyalar" />
+    <item
+        android:id="@+id/kullaniciDetayFragment"
+        android:icon="@drawable/kullanici_resim"
+        android:title="Profil" />
+    <item
+        android:id="@+id/sepetFragment"
+        android:icon="@drawable/sepet_resim"
+        android:title="Sepet" />
+</menu>
